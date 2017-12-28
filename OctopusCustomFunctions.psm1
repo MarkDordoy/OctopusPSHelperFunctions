@@ -54,7 +54,7 @@ Function Get-OctopusDNSName
     environment variable of _OctopusDNS
     
     .EXAMPLE
-    Get-OctopusAPIHeader -octopusDNSName "Octopus.investec.com"
+    Get-OctopusAPIHeader -octopusDNSName "Octopus.mydomain.com"
     #>
     [cmdletbinding()]
     param
@@ -89,10 +89,10 @@ Function Get-OctopusEnvironments
     Your API key that gives you access to the Octopus API
     
     .PARAMETER octopusDNSName
-    The DNS name of the octopus server, eg "octopusdeploypb.uk.corp.investec.com"
+    The DNS name of the octopus server, eg "octopus.mydomain.com"
     
     .EXAMPLE
-    Get-OctopusEnvironments -apiKey "API-123213fdsfdsfds" -octopusDNSName "octopusdeploypb.uk.corp.investec.com"
+    Get-OctopusEnvironments -apiKey "API-123213fdsfdsfds" -octopusDNSName "octopus.mydomain.com"
     
     .NOTES
     Returns a key value array.
@@ -133,13 +133,13 @@ Function Get-OctopusMachinesInSpecificEnvironment
     Your API key that gives you access to the Octopus API
 
     .PARAMETER octopusDNSName
-    The DNS name of the octopus server, eg "octopusdeploypb.uk.corp.investec.com"
+    The DNS name of the octopus server, eg "octopus.mydomain.com"
 
     .PARAMETER OnlyEnabledMachines
     This is a switch parameter. If used it will only return machines that are enabled
 
     .EXAMPLE
-    Get-OctopusMachinesInSpecificEnvironment -EnvironmentID "Environments-25" -apiKey "API-324343244323fd" -octopusDNSName "octopusdeploypb.uk.corp.investec.com"
+    Get-OctopusMachinesInSpecificEnvironment -EnvironmentID "Environments-25" -apiKey "API-324343244323fd" -octopusDNSName "octopus.mydomain.com"
 
     .Notes
     If you dont specify and APIkey or dns name it will look for the default values which are user environment variables:
@@ -186,13 +186,13 @@ Function Get-OctopusMachinesInSpecificRole
     Your API key that gives you access to the Octopus API
 
     .PARAMETER octopusDNSName
-    The DNS name of the octopus server, eg "octopusdeploypb.uk.corp.investec.com"
+    The DNS name of the octopus server, eg "octopus.mydomain.com"
 
     .PARAMETER OnlyEnabledMachines
     This is a switch parameter. If used it will only return machines that are enabled
     
     .EXAMPLE
-    Get-OctopusMachinesInSpecificRole -Role "telegraf" -apiKey "API-324343244323fd" -octopusDNSName "octopusdeploypb.uk.corp.investec.com"
+    Get-OctopusMachinesInSpecificRole -Role "telegraf" -apiKey "API-324343244323fd" -octopusDNSName "octopus.mydomain.com"
     
     .Notes
     If you dont specify and APIkey or dns name it will look for the default values which are user environment variables:
@@ -241,13 +241,13 @@ Function Get-OctopusMachinesInSpecificRoleAndEnvironment
     Your API key that gives you access to the Octopus API
 
     .PARAMETER octopusDNSName
-    The DNS name of the octopus server, eg "octopusdeploypb.uk.corp.investec.com"
+    The DNS name of the octopus server, eg "octopus.mydomain.com"
     
     .PARAMETER OnlyEnabledMachines
     This is a switch parameter. If used it will only return machines that are enabled
     
     .EXAMPLE
-    Get-OctopusMachinesInSpecificRoleAndEnvironment -role "telegraf" -EnviromentID "Environments-25" -apiKey "API-243213213123" -octopusDNSName "octopusdeploypb.uk.corp.investec.com"
+    Get-OctopusMachinesInSpecificRoleAndEnvironment -role "telegraf" -EnviromentID "Environments-25" -apiKey "API-243213213123" -octopusDNSName "octopus.mydomain.com"
     
     .Notes
     If you dont specify and APIkey or dns name it will look for the default values which are user environment variables:
@@ -296,13 +296,13 @@ Function Get-OctopusMachinesByThumbprint
     Your API key that gives you access to the Octopus API
 
     .PARAMETER octopusDNSName
-    The DNS name of the octopus server, eg "octopusdeploypb.uk.corp.investec.com"
+    The DNS name of the octopus server, eg "octopus.mydomain.com"
 
     .PARAMETER OnlyEnabledMachines
     This is a switch parameter. If used it will only return machines that are enabled
     
     .EXAMPLE
-    Get-OctopusMachinesByThumbprint -thumbprint "544354gfdgfdg43t" -apiKey "API-324343244323fd" -octopusDNSName "octopusdeploypb.uk.corp.investec.com"
+    Get-OctopusMachinesByThumbprint -thumbprint "544354gfdgfdg43t" -apiKey "API-324343244323fd" -octopusDNSName "octopus.mydomain.com"
     
     .Notes
     If you dont specify and APIkey or dns name it will look for the default values which are user environment variables:
@@ -348,13 +348,13 @@ Function Get-OctopusMachineByCenturylinkName
     Your API key that gives you access to the Octopus API
 
     .PARAMETER octopusDNSName
-    The DNS name of the octopus server, eg "octopusdeploypb.uk.corp.investec.com"
+    The DNS name of the octopus server, eg "octopus.mydomain.com"
 
     .PARAMETER OnlyEnabledMachines
     This is a switch parameter. If used it will only return machines that are enabled
     
     .EXAMPLE
-    Get-OctopusMachineByCenturylinkName -CLName "s616253shvw040" -apiKey "API-324343244323fd" -octopusDNSName "octopusdeploypb.uk.corp.investec.com"
+    Get-OctopusMachineByCenturylinkName -CLName "s616253shvw040" -apiKey "API-324343244323fd" -octopusDNSName "octopus.mydomain.com"
     
     .Notes
     If you dont specify and APIkey or dns name it will look for the default values which are user environment variables:
@@ -400,10 +400,10 @@ Function Get-OctopusProjectIDByName
     Your API key that gives you access to the Octopus API
 
     .PARAMETER octopusDNSName
-    The DNS name of the octopus server, eg "octopusdeploypb.uk.corp.investec.com"
+    The DNS name of the octopus server, eg "octopus.mydomain.com"
     
     .EXAMPLE
-    Get-OctopusProjectIDByName -Name "cis-web-api" -apiKey "API-324343244323fd" -octopusDNSName "octopusdeploypb.uk.corp.investec.com"
+    Get-OctopusProjectIDByName -Name "cis-web-api" -apiKey "API-324343244323fd" -octopusDNSName "octopus.mydomain.com"
     
     .Notes
     If you dont specify and APIkey or dns name it will look for the default values which are user environment variables:
@@ -449,7 +449,7 @@ Function ConvertTo-CommaSeperatedList
     Can be passed by pipeline
     
     .EXAMPLE
-    Get-OctopusMachinesInSpecificRoleAndEnvironment -role "telegraf" -EnviromentID "Environments-25" -apiKey "API-243213213123" -octopusDNSName "octopusdeploypb.uk.corp.investec.com" | ConvertTo-CommaSeperatedList 
+    Get-OctopusMachinesInSpecificRoleAndEnvironment -role "telegraf" -EnviromentID "Environments-25" -apiKey "API-243213213123" -octopusDNSName "octopus.mydomain.com" | ConvertTo-CommaSeperatedList 
     
     .NOTES
     Made as a general helper function to give output that can be used when writing nagios config
