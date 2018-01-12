@@ -483,15 +483,3 @@ Function ConvertTo-CommaSeperatedList
         return $outputString
     }
 }
-
-Export-ModuleMember -Function `
-    Get-OctopusEnvironments, `
-    Get-OctopusMachinesInSpecificEnvironment, `
-    Get-OctopusMachinesInSpecificRole, `
-    Get-OctopusMachinesInSpecificRoleAndEnvironment, `
-    Get-OctopusMachinesByThumbprint, `
-    Get-OctopusMachineByCenturylinkName, `
-    Get-OctopusProjectIDByName, `
-    ConvertTo-CommaSeperatedList, `
-    Get-OctopusAPIHeader, `
-    Get-OctopusDNSName
