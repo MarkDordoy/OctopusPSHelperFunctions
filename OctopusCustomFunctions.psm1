@@ -335,14 +335,14 @@ Function Get-OctopusMachinesByThumbprint
     }
 }
 
-Function Get-OctopusMachineByCenturylinkName
+Function Get-OctopusMachineByTentacleName
 {
     <#
     .SYNOPSIS
-    Will get machine details based on centurylink friendly name
+    Will get machine details based on tentacle url name
 
     .PARAMETER CLName
-    The name of the server (centurylink) eg s616253shvw040
+    The name of the server
     
     .PARAMETER apiKey
     Your API key that gives you access to the Octopus API
@@ -354,7 +354,7 @@ Function Get-OctopusMachineByCenturylinkName
     This is a switch parameter. If used it will only return machines that are enabled
     
     .EXAMPLE
-    Get-OctopusMachineByCenturylinkName -CLName "s616253shvw040" -apiKey "API-324343244323fd" -octopusDNSName "octopus.mydomain.com"
+    Get-OctopusMachineByTentacleName -Name "hostname" -apiKey "API-324343244323fd" -octopusDNSName "octopus.mydomain.com"
     
     .Notes
     If you dont specify and APIkey or dns name it will look for the default values which are user environment variables:
@@ -365,7 +365,7 @@ Function Get-OctopusMachineByCenturylinkName
     (
         [cmdletbinding()]
         [parameter(mandatory = $true)]
-        $CLName,
+        $Name,
         [parameter(Mandatory = $false)]
         $apiKey,
         [parameter(Mandatory = $false)]
@@ -379,11 +379,11 @@ Function Get-OctopusMachineByCenturylinkName
 
     if ($OnlyEnabledMachines)
     {
-        return ($response | where-object {(($_.Uri -like "*$CLName.*")) -and ($_.IsDisabled -eq $false)})
+        return ($response | where-object {(($_.Uri -like "*$Name.*")) -and ($_.IsDisabled -eq $false)})
     }
     else 
     {
-        return ($response | Where-Object {($_.Uri -like "*$CLName.*")})
+        return ($response | Where-Object {($_.Uri -like "*$Name.*")})
     }
 }
 
