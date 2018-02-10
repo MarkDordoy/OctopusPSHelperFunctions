@@ -10,7 +10,7 @@ This readme might not always be kept up to date, but at time of writing it has t
 ```powershell
 ConvertTo-CommaSeperatedList
 Get-OctopusEnvironments
-Get-OctopusMachineByCenturylinkName
+Get-OctopusMachineByTentacleName
 Get-OctopusMachinesByThumbprint
 Get-OctopusMachinesInSpecificEnvironment
 Get-OctopusMachinesInSpecificRole
